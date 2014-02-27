@@ -512,7 +512,6 @@ public class Main {
 		System.out.println("End.");
 
 		// -----------------------
-
 	}
 
 	private static int getNumberOfIntemsInArrays(
