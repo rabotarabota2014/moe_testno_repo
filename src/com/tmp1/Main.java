@@ -500,7 +500,7 @@ public class Main {
 		// System.out.println("	" + smsVersion.get(j).smsToString());
 		// }
 		// System.out.println();
-		// end OVA BESE PO STARO
+		// end OVA BESE PO STARO 
 		// System.out.println("backend(" + baseOnlyVersion.size() + "):");
 		// for (int j = 0; j < baseOnlyVersion.size(); j++) {
 		// System.out.println("	" + baseOnlyVersion.get(j).backendToString());
