@@ -329,9 +329,9 @@ public class Parser {
 								f.versionNumber = version;
 								barajVersion = false;
 							}
+							continue;
 							// System.out.println(matcher.group());
 							// System.out.println(matcher.replaceAll("\t"));
-							continue;
 						}
 					}
 					if (projectType == 3) {

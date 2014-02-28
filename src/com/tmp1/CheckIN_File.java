@@ -10,9 +10,8 @@ public class CheckIN_File {
 	public String baseVersionNumber = "";// 132948
 	public String smsVersionNumber = "";// 1024
 
-	
-	public String versionNumber = "";// opst za site, useful  za comparatorot
-	
+	public String versionNumber = "";// opst za site, useful za comparatorot
+
 	public String baseONLYVersionNumber = "";// 1.3.2087.2282
 
 	public String versionTypeRelease = "";// release
@@ -39,34 +38,49 @@ public class CheckIN_File {
 	}
 
 	public String toString() {
-
-		return versionTypeRelease + "		" + versionNumber + "		"
-				+ versionTypeOrange;
+		if (isValid()) {
+			return versionTypeRelease + "		" + versionNumber + "		"
+					+ versionTypeOrange;
+		} else {
+//			return "NOT COMPLETE " + versionTypeRelease + "		" + versionNumber
+//					+ "		" + versionTypeOrange;
+			//return "";//just ignore this one in a milion
+			return versionTypeRelease + "		" + versionNumber
+			+ "		" + "red";
+		}
 	}
 
-	public String voipToString() {
-		return voipVersionNumber + "	" + versionTypeRelease + "		"
-				+ versionTypeOrange;
+	public boolean isValid() {
+		if (versionNumber.length() > 0) {
+			if (versionTypeOrange.length() > 0) {
+				if (versionTypeRelease.length() > 0) {
+					return true;
+				}
+			}
+		}
+
+		return false;
 	}
 
-	
-	public String baseToString() {
-		return baseVersionNumber + "	" +versionTypeRelease + "		"
-				+ versionTypeOrange;
-	}
-	
-	public String smsToString() {
-		return smsVersionNumber + "	" + versionTypeRelease + "		"
-				+ versionTypeOrange;
-	}
-	
-	public String backendToString() {
-		return baseONLYVersionNumber + "	" + versionTypeRelease + "		"
-				+ versionTypeOrange;
-	}
-	
-	
- 
+	// public String voipToString() {
+	// return voipVersionNumber + "	" + versionTypeRelease + "		"
+	// + versionTypeOrange;
+	// }
+	//
+	// public String baseToString() {
+	// return baseVersionNumber + "	" +versionTypeRelease + "		"
+	// + versionTypeOrange;
+	// }
+	//
+	// public String smsToString() {
+	// return smsVersionNumber + "	" + versionTypeRelease + "		"
+	// + versionTypeOrange;
+	// }
+	//
+	// public String backendToString() {
+	// return baseONLYVersionNumber + "	" + versionTypeRelease + "		"
+	// + versionTypeOrange;
+	// }
 
 	public boolean isbackendEqual(CheckIN_File arg) {
 		if (!arg.baseONLYVersionNumber.equals(baseONLYVersionNumber)) {
@@ -82,9 +96,7 @@ public class CheckIN_File {
 		}
 		return true;
 	}
-	
-	
-	
+
 	public boolean isBaseEqual(CheckIN_File arg) {
 		if (!arg.baseVersionNumber.equals(baseVersionNumber)) {
 			return false;
@@ -99,9 +111,7 @@ public class CheckIN_File {
 		}
 		return true;
 	}
-	
-	
-	
+
 	public boolean isSmsEqual(CheckIN_File arg) {
 		if (!arg.smsVersionNumber.equals(smsVersionNumber)) {
 			return false;

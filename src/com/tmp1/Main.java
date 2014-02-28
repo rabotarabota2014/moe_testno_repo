@@ -96,15 +96,15 @@ public class Main {
 		// zemi go cel text
 
 		for (int i = 0; i < logFilePath.list().length; i++) {
-			File f = new File(logFilePath.getAbsolutePath()+"/"+logFilePath.list()[i]);
-			//System.out.println(logFilePath.getAbsolutePath()+"/"+logFilePath.list()[i]);
+			File f = new File(logFilePath.getAbsolutePath() + "/"
+					+ logFilePath.list()[i]);
+			// System.out.println(logFilePath.getAbsolutePath()+"/"+logFilePath.list()[i]);
 			if (f.exists()) {
 				if (f.isFile()) {
-					//System.out.println("a"+f.getAbsolutePath());
+					// System.out.println("a"+f.getAbsolutePath());
 					allText = allText
 							+ "\n"
-							+ readFileINTOString(f.getAbsolutePath()
-									.toString());
+							+ readFileINTOString(f.getAbsolutePath().toString());
 				}
 			}
 		}
@@ -269,6 +269,9 @@ public class Main {
 								niza.add(ttt);
 								baseGROUPED.put("release_red", niza);
 							}
+							// if(!ttt.isValid()){
+							// System.out.println("lllllllllllllllll     ");
+							// }
 						}
 					} else {
 						if (ttt.versionTypeOrange.equals("orange")) {
@@ -283,6 +286,9 @@ public class Main {
 								baseGROUPED.put("debug_orange", niza);
 							}
 						} else {
+							// if(!ttt.versionTypeOrange.equals("red")){
+							// System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+							// }
 							if (baseGROUPED.containsKey("debug_red")) {
 								ArrayList<CheckIN_File> niza = baseGROUPED
 										.get("debug_red");
@@ -384,100 +390,30 @@ public class Main {
 		System.out.println("Voip(" + getNumberOfIntemsInArrays(voipGROUPED)
 				+ "):");
 		System.out.println();
-		ArrayList<CheckIN_File> niz = voipGROUPED.get("release_orange");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = voipGROUPED.get("release_red");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = voipGROUPED.get("debug_orange");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = voipGROUPED.get("debug_red");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-
+		printaj(voipGROUPED.get("release_orange"));
+		printaj(voipGROUPED.get("release_red"));
+		printaj(voipGROUPED.get("debug_orange"));
+		printaj(voipGROUPED.get("debug_red"));
 		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("Base(" + getNumberOfIntemsInArrays(baseGROUPED)
 				+ "):");
 		System.out.println();
-		niz = baseGROUPED.get("release_orange");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = baseGROUPED.get("release_red");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = baseGROUPED.get("debug_orange");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = baseGROUPED.get("debug_red");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
+		printaj(baseGROUPED.get("release_orange"));
+		printaj(baseGROUPED.get("release_red"));
+		printaj(baseGROUPED.get("debug_orange"));
+		printaj(baseGROUPED.get("debug_red"));
 		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("SMS(" + getNumberOfIntemsInArrays(smsGROUPED)
 				+ "):");
 		System.out.println();
-		niz = smsGROUPED.get("release_orange");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = smsGROUPED.get("release_red");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = smsGROUPED.get("debug_orange");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
-		System.out.println();
-		niz = smsGROUPED.get("debug_red");
-		if (niz != null) {
-			for (int i = 0; i < niz.size(); i++) {
-				System.out.println(niz.get(i).toString());
-			}
-		}
+		printaj(smsGROUPED.get("release_orange"));
+		printaj(smsGROUPED.get("release_red"));
+		printaj(smsGROUPED.get("debug_orange"));
+		printaj(smsGROUPED.get("debug_red"));
 		// OVA BESE PO STARO
 		// System.out.println();
 		// Collections.sort(voipVersion, new MyComparator());
@@ -500,17 +436,27 @@ public class Main {
 		// System.out.println("	" + smsVersion.get(j).smsToString());
 		// }
 		// System.out.println();
-		// end OVA BESE PO STARO 
+		// end OVA BESE PO STARO
 		// System.out.println("backend(" + baseOnlyVersion.size() + "):");
 		// for (int j = 0; j < baseOnlyVersion.size(); j++) {
 		// System.out.println("	" + baseOnlyVersion.get(j).backendToString());
 		// }
-		// System.out.println(); 
+		// System.out.println();
 
 		System.out.println();
 		System.out.println("End.");
 
 		// -----------------------
+	}
+
+	private static void printaj(ArrayList<CheckIN_File> arrayList) {
+		if (arrayList != null) {
+			Collections.sort(arrayList, new MyComparator());
+			for (int i = 0; i < arrayList.size(); i++) {
+				System.out.println(arrayList.get(i).toString());
+			}
+		}
+		System.out.println();
 	}
 
 	private static int getNumberOfIntemsInArrays(
