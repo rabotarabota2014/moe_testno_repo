@@ -1,3 +1,6 @@
 C file
 dodaeno vo3
 kakakakaka
+
+
+nekoj bug fix kkk1
