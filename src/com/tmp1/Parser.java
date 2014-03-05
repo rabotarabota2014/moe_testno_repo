@@ -298,6 +298,13 @@ public class Parser {
 					// System.out.println(f.versionTypeRelease);
 					continue;
 				}
+				//vvv
+//				if (l.contains("[hisec")) {
+//					barajRelease = false;
+//					f.versionTypeRelease = l;
+//					// System.out.println(f.versionTypeRelease);
+//					continue;
+//				}
 			} else {
 				if (barajVersion) {
 					if (projectType == 1) {
@@ -352,6 +359,23 @@ public class Parser {
 							continue;
 						}
 					}
+					if (projectType == 4) {
+						Pattern pattern5 = Pattern.compile("\\d{5}");
+						if (l.matches(".*\\d{5}.*")) {
+							Matcher matcher = pattern5.matcher(l);
+							matcher.find();
+							String version = matcher.group();
+							
+							if (version.startsWith("12")) {
+								f.versionNumber = version;
+								System.out.println(version);
+							}
+							// System.out.println(matcher.group());
+							// System.out.println(matcher.replaceAll("\t"));
+							continue;
+						}
+					}
+
 				} else {// ///////////
 					if (l.contains("[orange]")) {
 						f.versionTypeOrange = "orange";
@@ -364,6 +388,10 @@ public class Parser {
 						// System.out.println(f.versionTypeOrange);
 						break;
 					}
+					
+//					if(!(l.contains("[red]")) && !(l.contains("[orange]")) && l.contains("[12")){
+//						System.out.println("aaa"+l);
+//					}
 				}
 			}
 

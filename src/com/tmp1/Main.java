@@ -109,14 +109,9 @@ public class Main {
 			}
 		}
 
+		//============================================================================
 		String[] all_chunks = allText.split("com.navayo.secfone.sipua");
-
-		// System.out.println(all_chunks[1]);
-		// System.out.println(all_chunks[2]);
-		// System.out.println(all_chunks[3]);
-
 		CheckIN_File ch;
-
 		for (int i = 1; i < all_chunks.length - 1; i++) {
 			// System.out.println();
 			// System.out.println("line:"+all_chunks[i]);
@@ -142,11 +137,13 @@ public class Main {
 		ArrayList<CheckIN_File> voipVersion = new ArrayList<CheckIN_File>();
 		ArrayList<CheckIN_File> baseVersion = new ArrayList<CheckIN_File>();
 		ArrayList<CheckIN_File> smsVersion = new ArrayList<CheckIN_File>();
+		ArrayList<CheckIN_File> hisecVersion = new ArrayList<CheckIN_File>();
 		ArrayList<CheckIN_File> baseOnlyVersion = new ArrayList<CheckIN_File>();
 
 		Map<String, ArrayList<CheckIN_File>> voipGROUPED = new HashMap<String, ArrayList<CheckIN_File>>();
 		Map<String, ArrayList<CheckIN_File>> baseGROUPED = new HashMap<String, ArrayList<CheckIN_File>>();
 		Map<String, ArrayList<CheckIN_File>> smsGROUPED = new HashMap<String, ArrayList<CheckIN_File>>();
+		Map<String, ArrayList<CheckIN_File>> hisecGROUPED = new HashMap<String, ArrayList<CheckIN_File>>();
 
 		// System.out.println("All update logs:" + all_checkInLogs.size());
 		for (int i = 0; i < all_checkInLogs.size(); i++) {
@@ -222,6 +219,36 @@ public class Main {
 			}
 
 		}
+		/////////////////////////////////////////////
+		
+		
+//		System.out.println();
+//		all_checkInLogs.clear();
+//		all_chunks = allText.split("com.navayo.secfone.base");
+//		for (int i = 1; i < all_chunks.length - 1; i++) {
+//			// 1 voip, 2 base, 3 sms,4 hisec
+//			ch = Parser.parseCheckIN_byPackageName(all_chunks[i], 4);
+//			all_checkInLogs.add(ch);
+//		}
+//
+//		for (int i = 0; i < all_checkInLogs.size(); i++) {
+//			CheckIN_File ttt = all_checkInLogs.get(i);
+//
+//			boolean hisecAdd = true;
+//			for (int j = 0; j < smsVersion.size(); j++) {
+//				if (i == j)
+//					continue;
+//				// System.out.println(j);
+//				if (ttt.isSmsEqual(smsVersion.get(j))) {
+//					hisecAdd = false;
+//					break;
+//				}
+//			}
+//			if (hisecAdd) {
+//				addToTheList(4,ttt,hisecVersion,hisecGROUPED);
+//			}
+//
+//		}
 
 		System.out.println("Voip(" + getNumberOfIntemsInArrays(voipGROUPED)
 				+ "):");
