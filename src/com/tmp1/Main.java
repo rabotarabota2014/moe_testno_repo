@@ -164,59 +164,7 @@ public class Main {
 				}
 			}
 			if (voipAdd) {
-				if (ttt.voipVersionNumber.length() > 0) {
-					voipVersion.add(ttt);
-
-					if (ttt.versionTypeRelease.equals("release")) {
-						if (ttt.versionTypeOrange.equals("orange")) {
-							if (voipGROUPED.containsKey("release_orange")) {
-								ArrayList<CheckIN_File> niza = voipGROUPED
-										.get("release_orange");
-								niza.add(ttt);
-								voipGROUPED.put("release_orange", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								voipGROUPED.put("release_orange", niza);
-							}
-						} else {
-							if (voipGROUPED.containsKey("release_red")) {
-								ArrayList<CheckIN_File> niza = voipGROUPED
-										.get("release_red");
-								niza.add(ttt);
-								voipGROUPED.put("release_red", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								voipGROUPED.put("release_red", niza);
-							}
-						}
-					} else {
-						if (ttt.versionTypeOrange.equals("orange")) {
-							if (voipGROUPED.containsKey("debug_orange")) {
-								ArrayList<CheckIN_File> niza = voipGROUPED
-										.get("debug_orange");
-								niza.add(ttt);
-								voipGROUPED.put("debug_orange", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								voipGROUPED.put("debug_orange", niza);
-							}
-						} else {
-							if (voipGROUPED.containsKey("debug_red")) {
-								ArrayList<CheckIN_File> niza = voipGROUPED
-										.get("debug_red");
-								niza.add(ttt);
-								voipGROUPED.put("debug_red", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								voipGROUPED.put("debug_red", niza);
-							}
-						}
-					}
-				}
+				addToTheList(1,ttt,voipVersion,voipGROUPED);
 			}
 
 		}
@@ -243,66 +191,7 @@ public class Main {
 				}
 			}
 			if (baseAdd) {
-
-				baseVersion.add(ttt);
-				if (ttt.baseVersionNumber.length() > 0) {
-					if (ttt.versionTypeRelease.equals("release")) {
-						if (ttt.versionTypeOrange.equals("orange")) {
-							if (baseGROUPED.containsKey("release_orange")) {
-								ArrayList<CheckIN_File> niza = baseGROUPED
-										.get("release_orange");
-								niza.add(ttt);
-								baseGROUPED.put("release_orange", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								baseGROUPED.put("release_orange", niza);
-							}
-						} else {
-							if (baseGROUPED.containsKey("release_red")) {
-								ArrayList<CheckIN_File> niza = baseGROUPED
-										.get("release_red");
-								niza.add(ttt);
-								baseGROUPED.put("release_red", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								baseGROUPED.put("release_red", niza);
-							}
-							// if(!ttt.isValid()){
-							// System.out.println("lllllllllllllllll     ");
-							// }
-						}
-					} else {
-						if (ttt.versionTypeOrange.equals("orange")) {
-							if (baseGROUPED.containsKey("debug_orange")) {
-								ArrayList<CheckIN_File> niza = baseGROUPED
-										.get("debug_orange");
-								niza.add(ttt);
-								baseGROUPED.put("debug_orange", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								baseGROUPED.put("debug_orange", niza);
-							}
-						} else {
-							// if(!ttt.versionTypeOrange.equals("red")){
-							// System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-							// }
-							if (baseGROUPED.containsKey("debug_red")) {
-								ArrayList<CheckIN_File> niza = baseGROUPED
-										.get("debug_red");
-								niza.add(ttt);
-								baseGROUPED.put("debug_red", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								baseGROUPED.put("debug_red", niza);
-							}
-						}
-					}
-
-				}
+				addToTheList(2,ttt,baseVersion,baseGROUPED);
 			}
 		}
 
@@ -329,60 +218,7 @@ public class Main {
 				}
 			}
 			if (smsAdd) {
-				if (ttt.smsVersionNumber.length() > 0) {
-					smsVersion.add(ttt);
-
-					if (ttt.versionTypeRelease.equals("release")) {
-						if (ttt.versionTypeOrange.equals("orange")) {
-							if (smsGROUPED.containsKey("release_orange")) {
-								ArrayList<CheckIN_File> niza = smsGROUPED
-										.get("release_orange");
-								niza.add(ttt);
-								smsGROUPED.put("release_orange", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								smsGROUPED.put("release_orange", niza);
-							}
-						} else {
-							if (smsGROUPED.containsKey("release_red")) {
-								ArrayList<CheckIN_File> niza = smsGROUPED
-										.get("release_red");
-								niza.add(ttt);
-								smsGROUPED.put("release_red", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								smsGROUPED.put("release_red", niza);
-							}
-						}
-					} else {
-						if (ttt.versionTypeOrange.equals("orange")) {
-							if (smsGROUPED.containsKey("debug_orange")) {
-								ArrayList<CheckIN_File> niza = smsGROUPED
-										.get("debug_orange");
-								niza.add(ttt);
-								smsGROUPED.put("debug_orange", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								smsGROUPED.put("debug_orange", niza);
-							}
-						} else {
-							if (smsGROUPED.containsKey("debug_red")) {
-								ArrayList<CheckIN_File> niza = smsGROUPED
-										.get("debug_red");
-								niza.add(ttt);
-								smsGROUPED.put("debug_red", niza);
-							} else {
-								ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
-								niza.add(ttt);
-								smsGROUPED.put("debug_red", niza);
-							}
-						}
-					}
-
-				}
+				addToTheList(3,ttt,smsVersion,smsGROUPED);
 			}
 
 		}
@@ -449,6 +285,87 @@ public class Main {
 		// -----------------------
 	}
 
+	
+	//1=voip,2=base,3-sms
+	public static void addToTheList(int AppType,CheckIN_File ttt, ArrayList<CheckIN_File> appVersion, Map<String, ArrayList<CheckIN_File>> appGROUPED){
+		if(AppType==1){
+			if (ttt.voipVersionNumber.length() > 0) {
+				
+			}else{
+				return;
+			}
+		}
+		
+		if(AppType==2){
+			if (ttt.baseVersionNumber.length() > 0) {
+				
+			}else{
+				return;
+			}
+		}
+		
+		if(AppType==3){
+			if (ttt.smsVersionNumber.length() > 0) {
+				
+			}else{
+				return;
+			}
+		}
+			appVersion.add(ttt);
+
+			if (ttt.versionTypeRelease.equals("release")) {
+				if (ttt.versionTypeOrange.equals("orange")) {
+					if (appGROUPED.containsKey("release_orange")) {
+						ArrayList<CheckIN_File> niza = appGROUPED
+								.get("release_orange");
+						niza.add(ttt);
+						appGROUPED.put("release_orange", niza);
+					} else {
+						ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
+						niza.add(ttt);
+						appGROUPED.put("release_orange", niza);
+					}
+				} else {
+					if (appGROUPED.containsKey("release_red")) {
+						ArrayList<CheckIN_File> niza = appGROUPED
+								.get("release_red");
+						niza.add(ttt);
+						appGROUPED.put("release_red", niza);
+					} else {
+						ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
+						niza.add(ttt);
+						appGROUPED.put("release_red", niza);
+					}
+				}
+			} else {
+				if (ttt.versionTypeOrange.equals("orange")) {
+					if (appGROUPED.containsKey("debug_orange")) {
+						ArrayList<CheckIN_File> niza = appGROUPED
+								.get("debug_orange");
+						niza.add(ttt);
+						appGROUPED.put("debug_orange", niza);
+					} else {
+						ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
+						niza.add(ttt);
+						appGROUPED.put("debug_orange", niza);
+					}
+				} else {
+					if (appGROUPED.containsKey("debug_red")) {
+						ArrayList<CheckIN_File> niza = appGROUPED
+								.get("debug_red");
+						niza.add(ttt);
+						appGROUPED.put("debug_red", niza);
+					} else {
+						ArrayList<CheckIN_File> niza = new ArrayList<CheckIN_File>();
+						niza.add(ttt);
+						appGROUPED.put("debug_red", niza);
+					}
+				}
+			}
+	}
+	
+	
+	
 	private static void printaj(ArrayList<CheckIN_File> arrayList) {
 		if (arrayList != null) {
 			Collections.sort(arrayList, new MyComparator());
@@ -571,197 +488,6 @@ public class Main {
 		}
 	}
 
-	// public static void nekaSedi(ArrayList<CheckIN_File> listaNaAllLogFiles) {
-	// int i = 0;
-	//
-	// Map<String, ArrayList<CheckIN_File>> mapTypeCanonical = new
-	// HashMap<String, ArrayList<CheckIN_File>>();
-	// String log = listaNaAllLogFiles.get(i).canonicalName;
-	//
-	// if (log.length() > 0) {
-	// // createDir(outputDirectory.getAbsolutePath() + "/"
-	// // + listaNaAllLogFiles.get(i).canonicalName);
-	//
-	// // boolean daliNajdeMatch=false;
-	// if (mapTypeCanonical.containsKey(log)) {
-	// ArrayList<CheckIN_File> arrLogs = mapTypeCanonical.get(log);
-	// arrLogs.add(listaNaAllLogFiles.get(i));
-	// // mapTypeExceptions.put(log,arrLogs );
-	// } else {
-	// ArrayList<CheckIN_File> arrLogs = new ArrayList<CheckIN_File>();
-	// arrLogs.add(listaNaAllLogFiles.get(i));
-	// mapTypeCanonical.put(log, arrLogs);
-	// }
-	//
-	// } else {
-	// // bez canonikal
-	// // createDir(outputDirectory.getAbsolutePath() + "/null");
-	// String t123 = listaNaAllLogFiles.get(i).stackTrace;
-	// if (t123.length() > 0) {
-	// if (mapTypeCanonical.containsKey("null")) {
-	// ArrayList<CheckIN_File> arrLogs = mapTypeCanonical
-	// .get("null");
-	// arrLogs.add(listaNaAllLogFiles.get(i));
-	// // mapTypeExceptions.put(log,arrLogs );
-	// } else {
-	// ArrayList<CheckIN_File> arrLogs = new ArrayList<CheckIN_File>();
-	// arrLogs.add(listaNaAllLogFiles.get(i));
-	// mapTypeCanonical.put("null", arrLogs);
-	// }
-	// }
-	// }
-	//
-	// // System.out.println("Number of all files = " +
-	// // listaNaAllLogFiles.size());
-	// // // System.out.println(mapTypeCanonical.keySet().size());
-	// // // System.out.println(mapTypeCanonical.values().size());
-	// // // System.out.println(mapTypeCanonical.size());
-	// // for (String key : mapTypeCanonical.keySet()) {
-	// // System.out.println("TYPE: \""+key+"\", number of files:"
-	// // + mapTypeCanonical.get(key).size());
-	// //
-	// // // search po stackTrace
-	// // ArrayList<LogFile> nizaOdPosebenTipNaGreska = mapTypeCanonical
-	// // .get(key);
-	// //
-	// // int brojNaFolder = 0;
-	// // for (int i = 0; i < nizaOdPosebenTipNaGreska.size(); i++) {
-	// //
-	// // String log111 = nizaOdPosebenTipNaGreska.get(i).stackTrace;
-	// //
-	// // if (log111.length() > 0) {
-	// //
-	// //
-	// System.out.println("   File path:"+nizaOdPosebenTipNaGreska.get(i).path);
-	// //
-	// // // if (mapTypeExceptions.containsKey(log111)) {
-	// // // ArrayList<LogFile> arrLogs = mapTypeExceptions
-	// // // .get(log111);
-	// // // arrLogs.add(mapTypeCanonical.get(key).get(i));
-	// // //
-	// // // // System.out.println("ISTI---------------------------"
-	// // // // + i + "  "
-	// // // // + mapTypeCanonical.get(key).get(i).path);
-	// // //
-	// // // if (mapTypeCanonical.get(key).get(i).canonicalName
-	// // // .length() > 0) {
-	// // //// createDir(outputDirectory.getAbsolutePath()
-	// // //// + "/"
-	// // //// + mapTypeCanonical.get(key).get(i).canonicalName
-	// // //// + "/"
-	// // //// + mapTypeCanonical.get(key).get(i).type);
-	// // //
-	// // // // vvv
-	// // // copyFile(
-	// // // mapTypeCanonical.get(key).get(i).path,
-	// // // outputDirectory.getAbsolutePath()
-	// // // + "/"
-	// // // + mapTypeCanonical.get(key).get(i).canonicalName
-	// // // + "/"
-	// // // + mapTypeCanonical.get(key).get(i).path
-	// // // .getName());
-	// // //
-	// // // } else {
-	// // //// createDir(outputDirectory.getAbsolutePath() + "/"
-	// // //// + "null" + "/"
-	// // //// + mapTypeCanonical.get(key).get(i).type);
-	// // // copyFile(
-	// // // mapTypeCanonical.get(key).get(i).path,
-	// // // outputDirectory.getAbsolutePath()
-	// // // + "/"
-	// // // + "null"
-	// // // + "/"
-	// // // + mapTypeCanonical.get(key).get(i).path
-	// // // .getName());
-	// // // }
-	// // //
-	// // // } else {
-	// // // brojNaFolder++;
-	// // // mapTypeCanonical.get(key).get(i).type = brojNaFolder;
-	// //
-	// // if (mapTypeCanonical.get(key).get(i).canonicalName
-	// // .length() > 0) {
-	// // // createDir(outputDirectory.getAbsolutePath()
-	// // // + "/"
-	// // // + mapTypeCanonical.get(key).get(i).canonicalName
-	// // // + "/"
-	// // // + mapTypeCanonical.get(key).get(i).type);
-	// //
-	// // // vvv
-	// // copyFile(
-	// // mapTypeCanonical.get(key).get(i).path,
-	// // outputDirectory.getAbsolutePath()
-	// // + "/"
-	// // + mapTypeCanonical.get(key).get(i).canonicalName
-	// // + "/"
-	// // + mapTypeCanonical.get(key).get(i).path
-	// // .getName());
-	// //
-	// // } else {
-	// // createDir(outputDirectory.getAbsolutePath() + "/"
-	// // + "null" + "/"
-	// // + mapTypeCanonical.get(key).get(i).firstLine);
-	// // copyFile(
-	// // mapTypeCanonical.get(key).get(i).path,
-	// // outputDirectory.getAbsolutePath()
-	// // + "/"
-	// // + "null"
-	// // + "/" +mapTypeCanonical.get(key).get(i).firstLine +"/"
-	// // + mapTypeCanonical.get(key).get(i).path
-	// // .getName());
-	// // }
-	// //
-	// // // System.out.println("NOVO---------------------------"
-	// // // + i + "  "
-	// // // + mapTypeCanonical.get(key).get(i).path);
-	// //
-	// // ArrayList<LogFile> arrLogs = new ArrayList<LogFile>();
-	// // arrLogs.add(mapTypeCanonical.get(key).get(i));
-	// // mapTypeExceptions.put(log111, arrLogs);
-	// // //}
-	// // }
-	// //
-	// // // if (nizaOdPosebenTipNaGreska.get(i).canonicalName.length() >
-	// // // 0) {
-	// // // System.out
-	// // // .println(nizaOdPosebenTipNaGreska.get(i).canonicalName);
-	// // // } else {
-	// // //
-	// // // }
-	// // }
-	// // // System.out.println(mapTypeExceptions.keySet().size());
-	// // // System.out.println(mapTypeExceptions.values().size());
-	// // // System.out.println("		Exception size:	" +
-	// // mapTypeExceptions.size());
-	// // // for (String key1 : mapTypeExceptions.keySet()) {
-	// // // System.out.println("		path:"
-	// // // + mapTypeExceptions.get(key1).get(0).path);
-	// // // }
-	// //
-	// // }
-	// //
-	// // // System.out.println(mapTypeExceptions.keySet().size());
-	// // // System.out.println(mapTypeExceptions.values().size());
-	// // // System.out.println(listaNaAllLogFiles.size());
-	// // // for (String key : mapTypeExceptions.keySet()) {
-	// // // System.out.println(mapTypeExceptions.get(key).size());
-	// // // }
-	// //
-	// //
-	// //
-	// //
-	// // //###################################################################
-	// //
-	// //
-	// //
-	// //
-	// //
-	// //
-	// //
-	// //
-	// //
-	//
-	// }
 
 	public static ArrayList<String> getBlackList(File blackListarg) {
 		ArrayList<String> list = new ArrayList<String>();
