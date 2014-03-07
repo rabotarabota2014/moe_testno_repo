@@ -1,0 +1,41 @@
+Decompiling -Godfrey Nolan-Android-Apress (2012)
+
+
+
+ch1	ok,N	Info ima mn poke od dovolno, se spomnuvat mn raboti i alatki ima i istorija, ama so ti sotana vo glata ti ostana. trosi go vremeto na citanje nesto novo
+ch2	ok,	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+more
+
+There are several very good books on the market about the JVM. The best is Bill
+Venners’ Inside the Java 2 Virtual Machine (McGraw-Hill, 2000). Some of the
+book’s chapters are available online at www.artima.com/insidejvm/ed2/. If you
+can’t find the book, then check out Venners’ equally excellent ‘‘Under the Hood’’
+2
+20
+CHAPTER 2: Ghost in the Machine
+articles on JavaWorld.com. This series of articles was the original material that
+he later expanded into the book. Sun’s Java Virtual Machine Specification, 2nd
+edition (Addison-Wesley, 1999), written by Tim Lindholm and Frank Yellin, is
+both comprehensive and very informative for would-be decompiler writers. But
+being a specification, it isn’t what you would call a good read. This book is also
+available online at http://java.sun.com/docs/books/vmspec.
+	

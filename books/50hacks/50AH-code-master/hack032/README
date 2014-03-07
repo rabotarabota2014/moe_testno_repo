@@ -1,0 +1,9 @@
+Just for this time I left the .so in the
+libs folder. If you want to recompile
+the complete app you will need:
+
+ * android SDK
+ * android NDK
+ * Cocos2d-x
+
+Check proj.android/build_native.sh

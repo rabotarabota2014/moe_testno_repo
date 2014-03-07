@@ -1,0 +1,16 @@
+*.DS_Store
+*.svn
+hack*/.settings
+hack*/bin
+hack*/gen
+hack*/obj
+hack*/target
+hack022/*/.settings
+hack022/*/bin
+hack022/*/gen
+hack032/proj.android/bin
+hack032/proj.android/gen
+hack032/proj.android/obj
+hack033/jni/tmp
+hack038/*/bin
+hack038/*/gen
